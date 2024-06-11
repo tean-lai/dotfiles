@@ -1,6 +1,0 @@
-2024/06/11-00:22:55.738 33a Reusing MANIFEST /home/tean/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
-2024/06/11-00:22:55.739 33a Recovering log #10
-2024/06/11-00:22:55.818 33a Reusing old log /home/tean/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000010.log 
-2024/06/11-01:28:55.784 33a Level-0 table #16: started
-2024/06/11-01:28:55.808 33a Level-0 table #16: 1423387 bytes OK
-2024/06/11-01:28:55.810 33a Delete type=0 #10

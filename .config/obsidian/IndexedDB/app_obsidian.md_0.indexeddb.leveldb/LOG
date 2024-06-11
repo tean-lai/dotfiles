@@ -1,8 +1,0 @@
-2024/06/11-12:29:18.580 145c Reusing MANIFEST /home/tean/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
-2024/06/11-12:29:18.580 145c Recovering log #15
-2024/06/11-12:29:18.582 145c Reusing old log /home/tean/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000015.log 
-2024/06/11-12:29:18.708 145c Compacting 1@1 + 2@2 files
-2024/06/11-12:29:18.766 145c Generated table #18@1: 12385 keys, 2135864 bytes
-2024/06/11-12:29:18.783 145c Generated table #19@1: 4198 keys, 1410484 bytes
-2024/06/11-12:29:18.783 145c Compacted 1@1 + 2@2 files => 3546348 bytes
-2024/06/11-12:29:18.784 145c compacted to: files[ 0 0 2 0 0 0 0 ]
