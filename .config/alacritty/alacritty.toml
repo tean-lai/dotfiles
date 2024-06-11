@@ -59,16 +59,16 @@ TERM = "alacritty"
 size = 14
 
 [font.bold]
-family = "Monaco"
+family = "MesloLGS Nerd Font"
 
 [font.bold_italic]
-family = "Monaco"
+family = "MesloLGS Nerd Font"
 
 [font.italic]
-family = "Monaco"
+family = "MesloLGS Nerd Font"
 
 [font.normal]
-family = "Monaco"
+family = "MesloLGS Nerd Font"
 
 [[keyboard.bindings]]
 action = "ResetFontSize"

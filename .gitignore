@@ -18,4 +18,5 @@
 !.config/polybar/**
 !.config/ranger/
 !.config/ranger/**
-
+!.config/rofi/
+!.config/rofi/**
