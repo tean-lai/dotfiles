@@ -1,0 +1,7 @@
+2024/06/11-12:33:58.001 6d8 Reusing MANIFEST /home/tean/.config/chromium/Default/WebStorage/16/IndexedDB/indexeddb.leveldb/MANIFEST-000001
+2024/06/11-12:33:58.002 6d8 Recovering log #3
+2024/06/11-12:33:58.006 6d8 Reusing old log /home/tean/.config/chromium/Default/WebStorage/16/IndexedDB/indexeddb.leveldb/000003.log 
+2024/06/11-12:34:02.950 6d1 Level-0 table #5: started
+2024/06/11-12:34:02.958 6d1 Level-0 table #5: 290450 bytes OK
+2024/06/11-12:34:02.960 6d1 Delete type=0 #3
+2024/06/11-12:34:02.961 6cf Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,32 @@
+{
+   "description": {
+      "message": "Tarayıcınızı izinsiz erişimlere karşı korumak için önlemler alın. Tarayıcınızı kolayca kilitleyerek güvenliği artırın."
+   },
+   "full_name": {
+      "message": "Browser Lock | Tarayıcını Kilitle"
+   },
+   "motto": {
+      "message": "Tarayıcıyı Kilitle"
+   },
+   "name": {
+      "message": "Browser Lock"
+   },
+   "old_password": {
+      "message": "Eski Şifreniz"
+   },
+   "password": {
+      "message": "Şifre"
+   },
+   "password_settings": {
+      "message": "Şifre Ayarları"
+   },
+   "save": {
+      "message": "Kaydet"
+   },
+   "settings_updated": {
+      "message": "Ayarlarınız güncellendi ve kaydedildi."
+   },
+   "update": {
+      "message": "$1 Güncelle $2"
+   }
+}

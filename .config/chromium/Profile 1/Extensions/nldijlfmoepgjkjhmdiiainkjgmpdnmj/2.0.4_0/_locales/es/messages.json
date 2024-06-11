@@ -1,0 +1,32 @@
+{
+   "description": {
+      "message": "Protege tu navegador contra el acceso no autorizado. Bloquea tu navegador fácilmente para mayor seguridad."
+   },
+   "full_name": {
+      "message": "Browser Lock | Bloquear navegador"
+   },
+   "motto": {
+      "message": "Bloquear navegador"
+   },
+   "name": {
+      "message": "Browser Lock"
+   },
+   "old_password": {
+      "message": "Eski Şifreniz"
+   },
+   "password": {
+      "message": "Şifre"
+   },
+   "password_settings": {
+      "message": "Şifre Ayarları"
+   },
+   "save": {
+      "message": "Kaydet"
+   },
+   "settings_updated": {
+      "message": "Ayarlarınız güncellendi ve kaydedildi."
+   },
+   "update": {
+      "message": "$1 Güncelle $2"
+   }
+}

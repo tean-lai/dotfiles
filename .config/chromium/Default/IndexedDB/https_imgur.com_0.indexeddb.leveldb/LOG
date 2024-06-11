@@ -1,0 +1,6 @@
+2024/06/10-18:42:07.620 1059 Creating DB /home/tean/.config/chromium/Default/IndexedDB/https_imgur.com_0.indexeddb.leveldb since it was missing.
+2024/06/10-18:42:07.624 1059 Reusing MANIFEST /home/tean/.config/chromium/Default/IndexedDB/https_imgur.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/10-18:42:07.654 1059 Level-0 table #5: started
+2024/06/10-18:42:07.655 1059 Level-0 table #5: 758 bytes OK
+2024/06/10-18:42:07.657 1059 Delete type=0 #3
+2024/06/10-18:42:07.657 1061 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

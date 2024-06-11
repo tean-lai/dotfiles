@@ -1,0 +1,6 @@
+2024/06/10-18:17:18.169 1059 Creating DB /home/tean/.config/chromium/Default/IndexedDB/https_www.linkedin.com_0.indexeddb.leveldb since it was missing.
+2024/06/10-18:17:18.173 1059 Reusing MANIFEST /home/tean/.config/chromium/Default/IndexedDB/https_www.linkedin.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/10-18:17:20.218 105a Level-0 table #5: started
+2024/06/10-18:17:20.220 105a Level-0 table #5: 1049 bytes OK
+2024/06/10-18:17:20.222 105a Delete type=0 #3
+2024/06/10-18:17:20.222 105a Manual compaction at level-0 from (begin) .. (end); will stop at (end)
