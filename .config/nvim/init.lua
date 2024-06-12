@@ -1,7 +1,24 @@
+vim.opt.nu = true
+vim.opt.relativenumber = true
+
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
+
+--[[
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
+--]]
+
+vim.opt.smartindent = true
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+
+-- vim.opt.termguicolors = true
+
 vim.g.mapleader = " "
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -17,37 +34,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = {
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  {
-    'nvim-telescope/telescope.nvim', tag = '0.1.6',
-    -- or                              , branch = '0.1.x',
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  },
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
-}
-local opts = {}
+require("lazy").setup("plugins")
 
-require("lazy").setup(plugins, opts)
-local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-
-require("lazy").setup({{
-  "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
-  config = function () 
-    local configs = require("nvim-treesitter.configs")
-
-    configs.setup({
-      ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "html" },
-      sync_install = false,
-      highlight = { enable = true },
-      indent = { enable = true },  
-    })
-  end
-}})
-
-require("catppuccin").setup({flavour = "macchiato"})
-vim.cmd.colorscheme "catppuccin"
 
