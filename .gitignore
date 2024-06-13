@@ -20,3 +20,4 @@
 !.config/ranger/**
 !.config/rofi/
 !.config/rofi/**
+!.zshrc
