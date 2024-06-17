@@ -22,6 +22,9 @@ vim.opt.undofile = true
 vim.g.mapleader = " "
 
 vim.api.nvim_set_keymap("n", "<leader>s", ":silent !$SHELL<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>y", '"+y<CR>', {})
+vim.api.nvim_set_keymap("v", "<leader>y", '"+y<CR>', {})
+vim.api.nvim_set_keymap("n", "<leader>p", '"+p<CR>', {})
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
