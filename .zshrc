@@ -19,3 +19,9 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
 
 eval "$(starship init zsh)"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/tean/.dart-cli-completion/zsh-config.zsh ]] && . /home/tean/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
