@@ -12,6 +12,7 @@
       ./localization.nix
       ./i3.nix
       ./nvidia.nix
+      ./sound.nix
     ];
 
   system.stateVersion = "24.05";
@@ -34,11 +35,11 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
-
   
   environment.systemPackages = with pkgs; [
     # gnome.gnome-disk-utility
     st alacritty kitty neovim git stow tmux starship fzf zsh
+    neofetch
     gcc cmake python3 go lua 
     brave obsidian discord surf
     unzip zip wget
@@ -46,8 +47,7 @@
     xclip
     killall
     mpv
-    # steam lutris protonup-qt
-    # greetd.tuigreet
+    # lutris protonup-qt
   ];
 
   programs.zsh.enable = true;
@@ -59,7 +59,6 @@
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
-
   
   # security.polkit.enable = true;
   hardware = {
@@ -72,22 +71,6 @@
 
   # services.fail2ban.enable = true;
   # virtualisation.vmware.host.enable = true;  # enable virtualisation
-
-  # sound
-  sound.enable = true;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
-
-  services.xserver = {
-    enable = true;
-    videoDrivers = [ "nvidia" ];
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
