@@ -10,19 +10,15 @@
       ./hardware-configuration.nix
       ./boot.nix
       ./localization.nix
+      ./desktop.nix
     ];
 
-  # boot.kernelPackages = pkgs.linuxPackages_latest;  # use the latest stable kernel
-  # boot.kernelModules = [ "nvidia_uvm" "nvidia_modeset" "nvidia_drm" "nvidia" ];
-  # boot.kernelParams = [ "nvidia-drm.modeset=1" ];
-
   system.stateVersion = "24.05";
+  nixpkgs.config.allowUnfree = true;
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
-  # networking.firewall.enable = true;
-
-  time.timeZone = "America/New_York";
+  networking.firewall.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -30,7 +26,6 @@
     variant = "";
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tean = {
     isNormalUser = true;
     shell = pkgs.zsh;
@@ -39,14 +34,14 @@
     packages = with pkgs; [];
   };
 
-  nixpkgs.config.allowUnfree = true;
-
+  
   environment.systemPackages = with pkgs; [
-    waybar hyprpaper libnotify dunst rofi-wayland egl-wayland neofetch blueberry mangohud # gnome.gnome-disk-utility
+    # gnome.gnome-disk-utility
     alacritty kitty neovim git stow tmux starship fzf zsh
     gcc cmake python3 go lua 
     brave obsidian discord
     unzip zip wget
+    pavucontrol
     # steam lutris protonup-qt
     # greetd.tuigreet
   ];
@@ -56,28 +51,19 @@
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Hermit" ]; })
   ];
- 
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
 
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
 
   environment.variables = {
-    # LIBVA_DRIVER_NAME = "nvidia";
-    # XDG_SESSION_TYPE = "wayland";
-    # GBM_BACKEND = "nvidia-drm";
-    # __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    LIBVA_DRIVER_NAME = "nvidia";
+    XDG_SESSION_TYPE = "wayland";
+    GBM_BACKEND = "nvidia-drm";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     # NVD_BACKEND = "direct" # good for electron?
   };
 
-  environment.sessionVariables = {
-    WLR_NO_HARDWARE_CURSORS = "1";
-    NIXOS_OZONE_WL = "1";
-  };
 
   # security.polkit.enable = true;
   hardware = {
@@ -95,7 +81,7 @@
       powerManagement.finegrained = false;
       open = false;
       nvidiaSettings = true;
-      # package = pkgs.linuxPackages_latest.nvidiaPackages.stable;
+      # package = pkgs.linuxPackages_latest.nvidiaPackages.beta;
     };
 
     bluetooth.enable = true;
@@ -128,17 +114,6 @@
     # desktopManager.plasma5.enable = true;
     # desktopManager.gnome.enable = true;
   };
-
-  # services.greetd = {
-  #   enable = true;
-  #   settings = {
-  #     default_session = {
-  #      command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --time-format '%I:%M %p | %a dot %h | %F' --cmd Hyprland";
-  #       user = "greeter";
-  #     };
-  #   };
-  # };
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
