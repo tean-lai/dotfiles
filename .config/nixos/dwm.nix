@@ -1,9 +1,23 @@
 { pkgs, ... }:
 
 {
-  services.xserver.windowManager.wdm.enable = true;
+  services.xserver = {
+    enable = true;
+    displayManager = {
+      lightdm.enable = true;
+    };
+    windowManager.dwm = {
+      enable = true;
+    #   package = pkgs.dwm.overrideAttrs {
+    #   src = "$HOME/.sources/dwm";
+    #   };
+    };
+  };
 
   environment.systemPackages = with pkgs; [
-    dwm
+    feh
+    libnotify
+    dunst
+    picom
   ];
 }

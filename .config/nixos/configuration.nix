@@ -10,7 +10,8 @@
       ./hardware-configuration.nix
       ./boot.nix
       ./localization.nix
-      ./i3.nix
+      # ./i3.nix
+      ./dwm.nix
       ./nvidia.nix
       ./sound.nix
     ];
@@ -40,10 +41,10 @@
     # gnome.gnome-disk-utility
     st alacritty kitty neovim git stow tmux starship fzf zsh
     neofetch
-    gcc cmake python3 go lua 
-    brave obsidian discord surf
+    gcc cmake python3 go lua gnumake
+    brave obsidian discord surf spotify
     unzip zip wget
-    pavucontrol
+    pavucontrol blueberry
     xclip
     killall
     mpv
@@ -51,9 +52,14 @@
   ];
 
   programs.zsh.enable = true;
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    xorg.libX11
+  ];
   
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "Hermit" ]; })
+    (nerdfonts.override { fonts = [ "Hermit" "JetBrainsMono" ]; })
   ];
 
   programs.steam.enable = true;
@@ -68,6 +74,7 @@
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.config.common.default = "*";
 
   # services.fail2ban.enable = true;
   # virtualisation.vmware.host.enable = true;  # enable virtualisation

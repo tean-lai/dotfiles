@@ -13,9 +13,7 @@
     dunst
     rofi-wayland
     egl-wayland
-    blueberry
     mangohud
-    neofetch
     greetd.tuigreet
   ];
 

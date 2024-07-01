@@ -16,7 +16,6 @@
 
     displayManager = {
       lightdm.enable = true;
-      defaultSession = "xfce+i3";
     };
 
     windowManager.i3 = {
@@ -28,8 +27,8 @@
         i3blocks
       ];
     };
- 
   };
+  services.displayManager.defaultSession = "xfce+i3";
 
   environment.systemPackages = with pkgs; [
     polybar
