@@ -38,13 +38,14 @@
   
   environment.systemPackages = with pkgs; [
     # gnome.gnome-disk-utility
-    alacritty kitty neovim git stow tmux starship fzf zsh
+    st alacritty kitty neovim git stow tmux starship fzf zsh
     gcc cmake python3 go lua 
-    brave obsidian discord
+    brave obsidian discord surf
     unzip zip wget
     pavucontrol
     xclip
     killall
+    mpv
     # steam lutris protonup-qt
     # greetd.tuigreet
   ];
