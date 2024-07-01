@@ -3,17 +3,9 @@
         "margin-left": 10,
         "margin-right": 10,
         "height" : 35,
-        "modules-left": [
-            "hyprland/window"
-        ],
-        "modules-center": [
-          "clock"
-        ],
-        "modules-right": [
-            "pulseaudio",
-        "network",
-        "temperature",
-        ],
+        "modules-left": [ "hyprland/window" ],
+        "modules-center": [ "clock" ],
+        "modules-right": [ "pulseaudio", "network", "tray" ],
         "hyprland/window": {
             "format": "{}",
             "max-length": 35,
@@ -75,4 +67,9 @@
             },
             "on-click": "pavucontrol"
         },
+        "tray": {
+          "icon-size": 20,
+          "spacing": 10
+        },
+
 }
