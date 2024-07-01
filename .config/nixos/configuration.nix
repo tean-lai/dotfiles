@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
       ./boot.nix
       ./localization.nix
-      ./desktop.nix
+      ./i3.nix
       ./nvidia.nix
     ];
 
@@ -43,6 +43,8 @@
     brave obsidian discord
     unzip zip wget
     pavucontrol
+    xclip
+    killall
     # steam lutris protonup-qt
     # greetd.tuigreet
   ];
@@ -57,34 +59,10 @@
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
 
-  environment.variables = {
-    LIBVA_DRIVER_NAME = "nvidia";
-    XDG_SESSION_TYPE = "wayland";
-    GBM_BACKEND = "nvidia-drm";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    # NVD_BACKEND = "direct" # good for electron?
-  };
-
-
+  
   # security.polkit.enable = true;
   hardware = {
     # cpu.amd.updateMicrocode = true;  # security?
-
-    opengl = {
-      enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
-    };
-
-    nvidia = {
-      modesetting.enable = true;
-      powerManagement.enable = false;
-      powerManagement.finegrained = false;
-      open = false;
-      nvidiaSettings = true;
-      # package = pkgs.linuxPackages_latest.nvidiaPackages.beta;
-    };
-
     bluetooth.enable = true;
   };
 
@@ -93,7 +71,6 @@
 
   # services.fail2ban.enable = true;
   # virtualisation.vmware.host.enable = true;  # enable virtualisation
-  
 
   # sound
   sound.enable = true;
@@ -109,11 +86,6 @@
   services.xserver = {
     enable = true;
     videoDrivers = [ "nvidia" ];
-    displayManager.lightdm.enable = false;
-    # displayManager.gdm.enable = true;
-    # displayManager.sddm.enable = true;
-    # desktopManager.plasma5.enable = true;
-    # desktopManager.gnome.enable = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
