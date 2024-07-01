@@ -11,6 +11,7 @@
       ./boot.nix
       ./localization.nix
       ./desktop.nix
+      ./nvidia.nix
     ];
 
   system.stateVersion = "24.05";
