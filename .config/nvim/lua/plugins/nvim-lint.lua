@@ -13,7 +13,7 @@ return {
 			javascriptreact = { "eslint_d" },
 			typescriptreact = { "eslint_d" },
 			kotlin = { "ktlint" },
-			cpp = { "cpplint" },
+      --cpp = { "cpplint" },
 			python = { "flake8" },
 		}
 
