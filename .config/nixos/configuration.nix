@@ -14,6 +14,7 @@
       # ./dwm.nix
       ./nvidia.nix
       ./sound.nix
+      ./terminal-emulator.nix
     ];
 
   system.stateVersion = "24.05";
@@ -39,7 +40,7 @@
   
   environment.systemPackages = with pkgs; [
     # gnome.gnome-disk-utility
-    st alacritty kitty neovim git stow tmux starship fzf zsh
+    neovim git stow tmux starship fzf zsh
     neofetch
     gcc cmake python3 go lua gnumake
     brave obsidian discord surf spotify

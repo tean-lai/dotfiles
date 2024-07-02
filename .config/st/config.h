@@ -7,7 +7,7 @@
  */
 static char *font =
     "Hurmit Nerd Font:pixelsize=20:antialias=true:autohint=true";
-static int borderpx = 2;
+static int borderpx = 10;
 
 /*
  * What program is execed by st depends of these precedence rules:
