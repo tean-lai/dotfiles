@@ -7,11 +7,11 @@
     
     desktopManager = {
       xterm.enable = false;
-      xfce = {
-        enable = true;
-        noDesktop = true;
-        enableXfwm = false;
-      };
+      # xfce = {
+      #   enable = true;
+      #   noDesktop = true;
+      #   enableXfwm = false;
+      # };
     };
 
     displayManager = {
@@ -28,7 +28,9 @@
       ];
     };
   };
-  services.displayManager.defaultSession = "xfce+i3";
+  # services.displayManager.defaultSession = "xfce+i3";
+  services.displayManager.defaultSession = "none+i3";
+
 
   environment.systemPackages = with pkgs; [
     polybar

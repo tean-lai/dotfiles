@@ -10,8 +10,8 @@
       ./hardware-configuration.nix
       ./boot.nix
       ./localization.nix
-      # ./i3.nix
-      ./dwm.nix
+      ./i3.nix
+      # ./dwm.nix
       ./nvidia.nix
       ./sound.nix
     ];
