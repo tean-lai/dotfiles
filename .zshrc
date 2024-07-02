@@ -19,13 +19,5 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
 
 eval "$(starship init zsh)"
-<<<<<<< HEAD
 export PATH="/usr/local/anaconda3/bin:$PATH"
-=======
 
-## [Completion]
-## Completion scripts setup. Remove the following line to uninstall
-[[ -f /home/tean/.dart-cli-completion/zsh-config.zsh ]] && . /home/tean/.dart-cli-completion/zsh-config.zsh || true
-## [/Completion]
-
->>>>>>> 547e40b9ad8e68a5b0462a181abe1e3414862b24
