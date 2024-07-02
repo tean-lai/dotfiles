@@ -52,7 +52,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+q kill
@@ -164,13 +164,14 @@ bindsym $mod+r restart i3 inplace
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+bindsym $mod+p exec --no-startup-id scrot ~/pictures/screenshot.png
 
 exec_always --no-startup-id feh --bg-fill /home/tean/pictures/wallpapers/kafka1.jpg
 
 # gaps
-gaps inner 10
-gaps outer 1
-gaps top 35
+gaps inner 0
+gaps outer 0
+gaps top 34
 smart_gaps off
 
 
@@ -183,7 +184,6 @@ default_border none
 exec --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --rate 144
 exec --no-startup-id xinput set-prop "9" "libinput Accel Profile Enabled" 0 1 0
 
-
-exec_always ~/.config/polybar/launch.sh
+exec_always ~/.config/polybar/launch.sh --forest
 
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf

@@ -59,16 +59,16 @@ TERM = "alacritty"
 size = 14
 
 [font.bold]
-family = "MesloLGS Nerd Font"
+family = "Hurmit Nerd Font"
 
 [font.bold_italic]
-family = "MesloLGS Nerd Font"
+family = "Hurmit Nerd Font"
 
 [font.italic]
-family = "MesloLGS Nerd Font"
+family = "Hurmit Nerd Font"
 
 [font.normal]
-family = "MesloLGS Nerd Font"
+family = "Hurmit Nerd Font"
 
 [[keyboard.bindings]]
 action = "ResetFontSize"

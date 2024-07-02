@@ -1,4 +1,4 @@
-*
+
 !.gitignore
 !.bashrc
 !.config/
@@ -21,3 +21,7 @@
 !.config/rofi/
 !.config/rofi/**
 !.zshrc
+!.config/Zelda64Recompiled
+!.config/Zelda64Recompiled/saves
+!.config/Zelda64Recompiled/saves/**
+!.tmux.conf
