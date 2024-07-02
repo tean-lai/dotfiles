@@ -19,3 +19,4 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
 
 eval "$(starship init zsh)"
+export PATH="/usr/local/anaconda3/bin:$PATH"
