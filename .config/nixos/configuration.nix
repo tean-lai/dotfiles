@@ -15,6 +15,7 @@
       ./nvidia.nix
       ./sound.nix
       ./terminal-emulator.nix
+      ./river.nix
     ];
 
   system.stateVersion = "24.05";
