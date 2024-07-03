@@ -6,6 +6,8 @@
   home.username = "tean";
   home.homeDirectory = "/home/tean";
 
+  nixpkgs.config.allowUnfree = true;
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -17,10 +19,21 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
-    pkgs.hello
-
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+  home.packages = with pkgs; [
+    hello
+    river rofi-wayland swaybg #libnotify
+    tmux starship
+    gcc python3 cmake go lua
+    obsidian discord
+    librewolf
+    pavucontrol
+    mako  # notifications 
+    wl-clipboard
+    blueberry bluetuith
+    font-manager
+    lynx
+    # qutebrowser-qt5
+    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ]; })
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -30,13 +43,48 @@
     # '')
   ];
 
+    
+  programs.foot.enable = true;
+  programs.foot.settings = {
+    main = {
+      font = "JetBrainsMono Nerd Font:size=12";
+    };
+
+    mouse = {
+      hide-when-typing = "yes";
+    };
+  };
+
+  programs.librewolf = {
+    enable = true;
+    settings = {
+      "webgl.disabled" = false;
+      "privacy.resistFingerprinting" = false;
+      "privacy.clearOnShutdown.history" = true;
+      "privacy.clearOnShutdown.cookies" = true;
+      "network.cookie.lifetimePolicy" = 0;
+    };
+  };
+  programs.pywal.enable = true;
+
+  programs.spotify-player = {
+    enable = true;
+  };
+
+  programs.zsh = {
+    enable = true;
+    autosuggestion = {
+      enable = false;
+    };
+  };
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
+    ".config/river/init".source = ../river/init;
+    ".config/nvim" = { source = ../nvim; recursive = true; };
+    # ".zshrc".source = ../../.zshrc;
+    ".config/.tmux.conf".source = ../../.tmux.conf;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -65,7 +113,6 @@
     EDITOR = "nvim";
   };
 
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
   # gtk = {
