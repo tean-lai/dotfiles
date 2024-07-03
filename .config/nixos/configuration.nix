@@ -10,8 +10,8 @@
       ./hardware-configuration.nix
       ./boot.nix
       ./localization.nix
-      ./i3.nix
-      # ./dwm.nix
+      # ./i3.nix
+      ./dwm.nix
       ./nvidia.nix
       ./sound.nix
       ./terminal-emulator.nix
@@ -43,12 +43,13 @@
     neovim git stow tmux starship fzf zsh
     neofetch
     gcc cmake python3 go lua gnumake
-    brave obsidian discord surf spotify
+    brave obsidian discord spotify
     unzip zip wget
     pavucontrol blueberry
     xclip
     killall
     mpv
+    lf
     # lutris protonup-qt
   ];
 
@@ -79,19 +80,6 @@
 
   # services.fail2ban.enable = true;
   # virtualisation.vmware.host.enable = true;  # enable virtualisation
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
 
   
  }

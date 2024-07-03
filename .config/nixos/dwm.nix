@@ -14,10 +14,14 @@
     };
   };
 
+  services.displayManager.defaultSession = "none+dwm";
+
+
   environment.systemPackages = with pkgs; [
     feh
     libnotify
     dunst
     picom
+    dmenu
   ];
 }
