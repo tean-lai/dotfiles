@@ -55,6 +55,7 @@
     git
     neovim
     home-manager
+    tmux
   #  wget
   ];
 
