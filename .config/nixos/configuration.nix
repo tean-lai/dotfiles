@@ -11,7 +11,7 @@
       ./boot.nix
       ./localization.nix
       # ./i3.nix
-      ./dwm.nix
+      # ./dwm.nix
       ./nvidia.nix
       ./sound.nix
       ./terminal-emulator.nix
