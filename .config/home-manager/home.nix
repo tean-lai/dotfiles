@@ -20,9 +20,9 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    hello
-    river rofi-wayland swaybg #libnotify
-    tmux starship
+    river rofi-wayland swaybg libnotify wlr-randr
+    tmux starship 
+    fzf gh
     gcc python3 cmake go lua
     obsidian discord
     librewolf
@@ -31,8 +31,7 @@
     wl-clipboard
     blueberry bluetuith
     font-manager
-    lynx
-    # qutebrowser-qt5
+    lynx ladybird
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ]; })
 
     # # You can also create simple shell scripts directly inside your
@@ -43,15 +42,11 @@
     # '')
   ];
 
-    
-  programs.foot.enable = true;
-  programs.foot.settings = {
-    main = {
-      font = "JetBrainsMono Nerd Font:size=12";
-    };
-
-    mouse = {
-      hide-when-typing = "yes";
+  programs.foot = {
+    enable = true;
+    settings = {
+      main.font = "JetBrainsMono Nerd Font:size=12";
+      mouse.hide-when-typing = "yes";
     };
   };
 
@@ -60,12 +55,16 @@
     settings = {
       "webgl.disabled" = false;
       "privacy.resistFingerprinting" = false;
-      "privacy.clearOnShutdown.history" = true;
-      "privacy.clearOnShutdown.cookies" = true;
+      "privacy.clearOnShutdown.history" = false;
+      "privacy.clearOnShutdown.cookies" = false;
       "network.cookie.lifetimePolicy" = 0;
     };
   };
-  programs.pywal.enable = true;
+
+  # https://mynixos.com/home-manager/options/programs.lf
+  programs.lf.enable = true;  # 
+
+  programs.pywal.enable = false;
 
   programs.spotify-player = {
     enable = true;
@@ -83,8 +82,8 @@
   home.file = {
     ".config/river/init".source = ../river/init;
     ".config/nvim" = { source = ../nvim; recursive = true; };
-    # ".zshrc".source = ../../.zshrc;
-    ".config/.tmux.conf".source = ../../.tmux.conf;
+    # "/.config/.tmux.conf".source = ../.tmux.conf;
+    # ".config/user-dirs.dirs".source = ../user-dirs.dirs;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
