@@ -9,6 +9,7 @@
   home.stateVersion = "23.11";
 
   home.packages = with pkgs; [
+    river rofi-wayland swaybg libnotify wlr-randr mako
     tmux starship 
     fzf gh
     obsidian discord
@@ -27,13 +28,6 @@
     };
   };
 
-  programs.river = {
-    enable = true;
-    extraPackages = with pkgs; [
-      rofi-wayland swaybg libnotify wlr-randr mako
-    ]
-
-  };
 
   programs.librewolf = {
     enable = true;
@@ -46,7 +40,6 @@
     };
   };
 
-  # https://mynixos.com/home-manager/options/programs.lf
   programs.lf.enable = true;  # 
 
   programs.pywal.enable = false;
@@ -62,40 +55,10 @@
     };
   };
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
   home.file = {
     ".config/river/init".source = ../river/init;
-    ".config/nvim" = { source = ../nvim; recursive = true; };
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
   };
 
-  # Home Manager can also manage your environment variables through
-  # 'home.sessionVariables'. These will be explicitly sourced when using a
-  # shell provided by Home Manager. If you don't want to manage your shell
-  # through Home Manager then you have to manually source 'hm-session-vars.sh'
-  # located at either
-  #
-  #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  ~/.local/state/nix/profiles/profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  /etc/profiles/per-user/tean/etc/profile.d/hm-session-vars.sh
-  #
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
-
-  programs.home-manager.enable = true;
 
   # gtk = {
   #   enable = true;
@@ -104,14 +67,4 @@
   #   iconTheme.name = "GruvboxPlus";
   # };
 
-  programs.git = {
-    enable = true;
-    userName = "Tean Lai";
-    userEmail = "laitean19@gmail.com";
-    aliases = {
-      pu = "push";
-      co = "checkout";
-      cm = "commit";
-    };
-  };
 }
