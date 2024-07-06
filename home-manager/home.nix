@@ -10,10 +10,8 @@
   home.packages = with pkgs; [
     tmux
     kitty
-    # luakit
     fzf
     yash
-    # ladybird
     spotify-player
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
@@ -21,7 +19,7 @@
   ];
 
   programs = {
-    # alacritty fish git helix zsh
+    # alacritty git helix zsh
     alacritty = {
       enable = true;
       settings = {

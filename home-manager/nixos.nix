@@ -9,15 +9,17 @@
   home.stateVersion = "23.11";
 
   home.packages = with pkgs; [
-    river rofi-wayland swaybg libnotify wlr-randr mako
-    tmux starship 
-    fzf gh
+    river rofi-wayland swaybg libnotify wlr-randr #  mako # wayland
+    dunst libnotify feh dmenu polybar
+    ungoogled-chromium
+    starship
     obsidian discord
     pavucontrol
     wl-clipboard
     blueberry bluetuith
     font-manager
-    lynx ladybird
+    ladybird
+    lynx 
   ];
 
   programs.foot = {
@@ -48,15 +50,10 @@
     enable = true;
   };
 
-  programs.zsh = {
-    enable = true;
-    autosuggestion = {
-      enable = false;
-    };
-  };
-
   home.file = {
     ".config/river/init".source = ../.config/river/init;
+    ".config/i3/config".source = ../.config/i3/config;
+    ".config/polybar" = { source = ../.config/polybar; recursive = true; };
   };
 
 

@@ -45,7 +45,9 @@
     description = "tean";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    shell = pkgs.yash;
   };
+
 
   nixpkgs.config.allowUnfree = true;
 
@@ -59,8 +61,18 @@
   #  wget
   ];
 
-  programs.neovim.enable = true;
-  programs.neovim.defaultEditor = true;
+  services.xserver = {
+    enable = true;
+    desktopManager = {
+      xterm.enable = false;
+    };
+
+    displayManager.lightdm.enable = true;
+
+    windowManager.i3 = {
+      enable = true;
+   };
+  };
 
   system.stateVersion = "24.05"; 
 
