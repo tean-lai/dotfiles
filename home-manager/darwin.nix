@@ -7,13 +7,8 @@
 
   home.stateVersion = "23.11";
 
-  home.packages = with pkgs; [
-    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ]; })
-  ];
+  home.packages = with pkgs; [ xquartz ];
 
-
-  home.file = {
-  };
-
+  home.file = { };
 
 }

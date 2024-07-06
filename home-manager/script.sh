@@ -10,8 +10,8 @@ run_command() {
     1|nixos) 
       sh -c "home-manager switch --flake .#nixos"
       ;;
-    2|macos) 
-      sh -c "home-manager switch --flake .#nixos"
+    2|macos)
+      sh -c "home-manager switch --flake .#macos"
       ;;
     *)
       echo "invalid option. aborting the script."

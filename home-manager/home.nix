@@ -2,7 +2,6 @@
 
 {
   home.username = "tean";
-  # home.homeDirectory = "/home/tean";
 
   nixpkgs.config.allowUnfree = true;
 
@@ -11,7 +10,9 @@
   home.packages = with pkgs; [
     tmux
     kitty
+    # luakit
     fzf
+    yash
     # ladybird
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
@@ -34,8 +35,6 @@
       };
     };
 
-    fish = { enable = true; };
-
     git = {
       enable = true;
       userName = "Tean Lai";
@@ -50,23 +49,9 @@
     helix = {
       defaultEditor = true;
       enable = true;
-      ignores = [ ".build" "!.gitignore" ];
-      languages.language = [{
-        name = "nix";
-        auto-format = true;
-        formatter.command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt-rfc-style";
-      }];
-      settings = {
-        editor.cursor-shape = {
-          normal = "block";
-          insert = "bar";
-          select = "underline";
-        };
-        theme = "base16_default";
-      };
     };
 
-    spotify-player.enable = true;
+    # spotify-player.enable = true;
 
     zsh = { enable = true; };
 
@@ -75,18 +60,11 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/nvim" = {
-      source = ../.config/nvim;
+    ".config/kitty/kitty.conf".source = ../.config/kitty/kitty.conf;
+    ".config/helix" = {
+      source = ../.config/helix;
       recursive = true;
     };
-    # "/.config/.tmux.conf".source = ../.tmux.conf;
-    # ".config/user-dirs.dirs".source = ../user-dirs.dirs;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
   };
 
   home.sessionVariables = { EDITOR = "hx"; };

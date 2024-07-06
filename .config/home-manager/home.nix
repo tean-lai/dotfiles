@@ -20,19 +20,39 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    river rofi-wayland swaybg libnotify wlr-randr
-    tmux starship 
-    fzf gh
-    gcc python3 cmake go lua
-    obsidian discord
+    river
+    rofi-wayland
+    swaybg
+    libnotify
+    wlr-randr
+    tmux
+    starship
+    fzf
+    gh
+    gcc
+    python3
+    cmake
+    go
+    lua
+    obsidian
+    discord
     librewolf
     pavucontrol
-    mako  # notifications 
+    mako # notifications
     wl-clipboard
-    blueberry bluetuith
+    blueberry
+    bluetuith
     font-manager
-    lynx ladybird
-    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ]; })
+    lynx
+    ladybird
+    (pkgs.nerdfonts.override {
+      fonts = [
+        "JetBrainsMono"
+        "Hermit"
+        "FiraCode"
+        "ComicShannsMono"
+      ];
+    })
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -62,7 +82,7 @@
   };
 
   # https://mynixos.com/home-manager/options/programs.lf
-  programs.lf.enable = true;  # 
+  programs.lf.enable = true;
 
   programs.pywal.enable = false;
 
@@ -81,7 +101,10 @@
   # plain files is through 'home.file'.
   home.file = {
     ".config/river/init".source = ../river/init;
-    ".config/nvim" = { source = ../nvim; recursive = true; };
+    ".config/nvim" = {
+      source = ../nvim;
+      recursive = true;
+    };
     # "/.config/.tmux.conf".source = ../.tmux.conf;
     # ".config/user-dirs.dirs".source = ../user-dirs.dirs;
 
