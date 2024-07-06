@@ -10,12 +10,8 @@
   };
 
   outputs = { nixpkgs, home-manager, ... }:
-    let
-      # system = "x86_64-linux";
-      # pkgs = nixpkgs.legacyPackages.${system};
-    in 
     {
-      homeConfiguratinos = {
+      homeConfigurations = {
         macos = home-manager.lib.homeManagerConfiguration {
 	  pkgs = import nixpkgs { system = "aarch64-darwin"; };
           modules = [ ./home.nix ./darwin.nix ];
@@ -24,6 +20,7 @@
 	nixos = home-manager.lib.homeManagerConfiguration {
 	  pkgs = import nixpkgs { system = "x86_64-linux"; };
 	  modules = [ ./home.nix ./nixos.nix ];
+	};
       };
     };
 }
