@@ -56,7 +56,7 @@
   };
 
   home.file = {
-    ".config/river/init".source = ../river/init;
+    ".config/river/init".source = ../.config/river/init;
   };
 
 
