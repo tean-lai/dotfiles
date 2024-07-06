@@ -14,7 +14,6 @@
     fzf
     yash
     # ladybird
-    ungoogled-chromium
     spotify-player
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
@@ -70,5 +69,6 @@
   home.sessionVariables = { EDITOR = "hx"; };
 
   programs.home-manager.enable = true;
+
 
 }
