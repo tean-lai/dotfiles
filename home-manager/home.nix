@@ -13,14 +13,16 @@
     # luakit
     fzf
     yash
-    ladybird
+    # ladybird
+    ungoogled-chromium
+    spotify-player
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
     })
   ];
 
   programs = {
-    # alacritty fish git helix spotify-player zsh
+    # alacritty fish git helix zsh
     alacritty = {
       enable = true;
       settings = {
@@ -51,14 +53,12 @@
       enable = true;
     };
 
-    # spotify-player.enable = true;
+    urxvt.enable = true;
 
     zsh = { enable = true; };
 
   };
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
   home.file = {
     ".config/kitty/kitty.conf".source = ../.config/kitty/kitty.conf;
     ".config/helix" = {
