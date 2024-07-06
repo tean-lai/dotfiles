@@ -10,8 +10,10 @@
   home.packages = with pkgs; [
     tmux
     kitty
+    yt-dlp mpv
     fzf
-    yash
+    pass pinentry
+    texliveFull 
     spotify-player
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
@@ -19,7 +21,7 @@
   ];
 
   programs = {
-    # alacritty git helix zsh
+    # alacritty git gpg helix zsh
     alacritty = {
       enable = true;
       settings = {
@@ -45,14 +47,15 @@
       };
     };
 
+    gpg = {
+      enable = true;
+    };
+
     helix = {
       defaultEditor = true;
       enable = true;
     };
 
-    urxvt.enable = true;
-
-    zsh = { enable = true; };
 
   };
 

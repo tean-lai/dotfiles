@@ -45,19 +45,21 @@
     description = "tean";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
-    shell = pkgs.yash;
+    shell = pkgs.zsh;
   };
 
 
   nixpkgs.config.allowUnfree = true;
 
+  programs.zsh.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
-    neovim
     home-manager
     tmux
+    
   #  wget
   ];
 
@@ -74,6 +76,16 @@
    };
   };
 
-  system.stateVersion = "24.05"; 
+  system.stateVersion = "24.05";
 
+  sound.enable = true;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+  
 }

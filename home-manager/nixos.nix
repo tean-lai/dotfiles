@@ -10,15 +10,14 @@
 
   home.packages = with pkgs; [
     river rofi-wayland swaybg libnotify wlr-randr #  mako # wayland
-    dunst libnotify feh dmenu polybar
-    ungoogled-chromium
+    dunst libnotify feh dmenu polybar xclip
+    brave
     starship
     obsidian discord
     pavucontrol
     wl-clipboard
     blueberry bluetuith
     font-manager
-    ladybird
     lynx 
   ];
 
