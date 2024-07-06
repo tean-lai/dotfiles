@@ -13,7 +13,7 @@
     # luakit
     fzf
     yash
-    # ladybird
+    ladybird
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
     })
