@@ -12,7 +12,8 @@
     kitty
     yt-dlp # mpv (requires swift for whatever reason)
     fzf
-    pass 
+    pass
+    uutils-coreutils-noprefix  # rust core utils 
     # texliveFull 
     spotify-player
     (nerdfonts.override {
