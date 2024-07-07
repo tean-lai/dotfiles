@@ -17,6 +17,7 @@
     newsboat
     # texliveFull 
     spotify-player
+    syncthing
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
     })
