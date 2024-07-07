@@ -18,6 +18,7 @@
     # texliveFull 
     spotify-player
     syncthing
+    mplayer
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
     })
