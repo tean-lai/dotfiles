@@ -10,10 +10,10 @@
   home.packages = with pkgs; [
     tmux
     kitty
-    yt-dlp mpv
+    yt-dlp # mpv (requires swift for whatever reason)
     fzf
-    pass pinentry
-    texliveFull 
+    pass 
+    # texliveFull 
     spotify-player
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
