@@ -23,6 +23,11 @@
 
   programs = {
     # alacritty git gpg helix zsh
+
+    newsboat = {
+      enable = true;
+    };
+
     alacritty = {
       enable = true;
       settings = {
