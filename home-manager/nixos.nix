@@ -19,6 +19,7 @@
     blueberry bluetuith
     font-manager
     lynx 
+    pinentry-curses 
   ];
 
   programs.lf.enable = true;  # 

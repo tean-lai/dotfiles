@@ -14,6 +14,7 @@
     fzf
     pass
     uutils-coreutils-noprefix  # rust core utils 
+    newsboat
     # texliveFull 
     spotify-player
     (nerdfonts.override {
@@ -23,10 +24,6 @@
 
   programs = {
     # alacritty git gpg helix zsh
-
-    newsboat = {
-      enable = true;
-    };
 
     alacritty = {
       enable = true;
@@ -51,10 +48,6 @@
         co = "checkout";
         cm = "commit";
       };
-    };
-
-    gpg = {
-      enable = true;
     };
 
     helix = {

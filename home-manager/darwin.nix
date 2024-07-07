@@ -11,4 +11,10 @@
 
   home.file = { };
 
+  programs = {
+    gpg = {
+      enable = true;
+    };
+  };
+
 }

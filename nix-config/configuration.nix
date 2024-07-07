@@ -53,13 +53,18 @@
 
   programs.zsh.enable = true;
 
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-curses;
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
     home-manager
     tmux
-    
+    pinentry-curses
   #  wget
   ];
 
