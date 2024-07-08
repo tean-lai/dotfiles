@@ -57,6 +57,8 @@
       enable = true;
     };
 
+    lf.enable = true;
+
 
   };
 

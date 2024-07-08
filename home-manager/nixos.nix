@@ -22,12 +22,9 @@
     pinentry-curses 
   ];
 
-  programs.lf.enable = true;  # 
-
-  programs.pywal.enable = false;
-
-  programs.spotify-player = {
-    enable = true;
+  programs = {
+    lf.enable = true;
+    pywal.enable = true;
   };
 
   home.file = {
