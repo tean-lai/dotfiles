@@ -1,10 +1,10 @@
-theme = "base16_default"
+theme = "rose_pine"
 
 [editor]
 line-number = "relative"
 mouse = false
 auto-format = true
-rulers = [120]
+# rulers = [120]
 
 [editor.indent-guides]
 character = "╎"
