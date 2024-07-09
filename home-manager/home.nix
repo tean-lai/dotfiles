@@ -19,6 +19,7 @@
     spotify-player
     syncthing
     mplayer
+    ncmpcpp mpd
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
     })
