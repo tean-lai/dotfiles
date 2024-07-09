@@ -20,6 +20,7 @@
     font-manager
     lynx 
     pinentry-curses 
+    protonvpn-cli_2 python3 python311Packages.pythondialog python311Packages.pip openvpn qbittorrent-qt5 soulseekqt nicotine-plus
   ];
 
   programs = {
