@@ -28,3 +28,8 @@ hidden = false
 [keys.normal]
 esc = [ "collapse_selection", "keep_primary_selection"]
 
+[editor.soft-wrap]
+enable = true
+max-wrap = 25 # increase value to reduce forced mid-word wrapping
+max-indent-retain = 40
+wrap-indicator = ""  # set wrap-indicator to "" to hide it
