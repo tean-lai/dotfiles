@@ -24,8 +24,6 @@
       fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
     })
 
-    # emacs and depencies
-    git emacs ripgrep coreutils fd clang
   ];
 
   programs = {
