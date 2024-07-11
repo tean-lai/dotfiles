@@ -23,6 +23,7 @@
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
     })
+    taplo pyright marksman nil #lsp
 
   ];
 
