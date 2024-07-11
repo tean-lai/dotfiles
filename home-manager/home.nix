@@ -66,10 +66,10 @@
 
   home.file = {
     # ".config/kitty" = { source = ../.config/kitty; recursive = true; };
-    ".config/helix" = {
-      source = ../.config/helix;
-      recursive = true;
-    };
+    # ".config/helix" = {
+    #   source = ../.config/helix;
+    #   recursive = true;
+    # };
     ".zshrc".source = ../.zshrc;
   };
 
