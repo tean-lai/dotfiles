@@ -65,7 +65,7 @@
   };
 
   home.file = {
-    ".config/kitty/kitty.conf".source = ../.config/kitty/kitty.conf;
+    ".config/kitty" = { source = ../.config/kitty; recursive = true; };
     ".config/helix" = {
       source = ../.config/helix;
       recursive = true;
