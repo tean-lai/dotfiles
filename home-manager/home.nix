@@ -24,7 +24,8 @@
       fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
     })
     taplo pylint python312Packages.python-lsp-server marksman nil #lsp
-    postman
+    kakoune
+
 
   ];
 
