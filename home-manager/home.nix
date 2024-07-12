@@ -23,7 +23,7 @@
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
     })
-    taplo python312Packages.python-lsp-server marksman nil #lsp
+    taplo pylint python312Packages.python-lsp-server marksman nil #lsp
     postman
 
   ];

@@ -5,9 +5,10 @@ line-number = "relative"
 mouse = false
 auto-format = true
 # rulers = [120]
+bufferline = "multiple"
 
 [editor.indent-guides]
-character = "╎"
+# character = "╎"
 render = true
 
 [editor.cursor-shape]
@@ -35,3 +36,5 @@ enable = true
 max-wrap = 25 # increase value to reduce forced mid-word wrapping
 max-indent-retain = 40
 wrap-indicator = ""  # set wrap-indicator to "" to hide it
+
+
