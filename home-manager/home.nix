@@ -21,7 +21,7 @@
     mplayer
     ncmpcpp mpd
     (nerdfonts.override {
-      fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" ];
+      fonts = [ "JetBrainsMono" "Hermit" "FiraCode" "ComicShannsMono" "Mononoki" ];
     })
     taplo pylint python312Packages.python-lsp-server marksman nil #lsp
     kakoune vis
