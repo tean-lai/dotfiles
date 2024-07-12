@@ -7,7 +7,7 @@
 
   home.stateVersion = "23.11";
 
-  home.packages = with pkgs; [ xquartz ];
+  home.packages = with pkgs; [ vscode ];
 
   home.file = { };
 
