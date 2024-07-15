@@ -26,7 +26,7 @@
     taplo pylint python312Packages.python-lsp-server marksman nil #lsp
     kakoune vis
 
-    alacritty
+    calcurse
 
   ];
 
