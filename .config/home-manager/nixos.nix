@@ -29,9 +29,9 @@
   };
 
   home.file = {
-    ".config/river/init".source = ../.config/river/init;
-    ".config/i3/config".source = ../.config/i3/config;
-    ".config/polybar" = { source = ../.config/polybar; recursive = true; };
+    # ".config/river/init".source = ../.config/river/init;
+    # ".config/i3/config".source = ../.config/i3/config;
+    # ".config/polybar" = { source = ../.config/polybar; recursive = true; };
   };
 
 
