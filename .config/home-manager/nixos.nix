@@ -21,6 +21,7 @@
     lynx 
     pinentry-curses 
     vlc
+    osu-lazer
   ];
 
   programs = {
