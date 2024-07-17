@@ -74,7 +74,7 @@
     #   source = ../.config/helix;
     #   recursive = true;
     # };
-    ".zshrc".source = ../.zshrc;
+    # ".zshrc".source = ../../.zshrc;
   };
 
   home.sessionVariables = { EDITOR = "hx"; };
