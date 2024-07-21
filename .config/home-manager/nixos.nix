@@ -9,18 +9,19 @@
   home.stateVersion = "23.11";
 
   home.packages = with pkgs; [
-    river rofi-wayland swaybg libnotify wlr-randr #  mako # wayland
+    # river rofi-wayland swaybg libnotify wlr-randr waybar #  mako # wayland
+    waybar hyprpaper libnotify dunst rofi-wayland egl-wayland mangohud wl-clipboard
     dunst libnotify feh dmenu polybar xclip
+    foot
     brave
     starship
     obsidian discord
     pavucontrol
-    wl-clipboard
     blueberry bluetuith
     font-manager
-    lynx 
     pinentry-curses 
-    protonvpn-cli_2 python3 python311Packages.pythondialog python311Packages.pip openvpn qbittorrent-qt5 soulseekqt nicotine-plus
+    vlc
+    osu-lazer
   ];
 
   programs = {
@@ -29,9 +30,9 @@
   };
 
   home.file = {
-    ".config/river/init".source = ../.config/river/init;
-    ".config/i3/config".source = ../.config/i3/config;
-    ".config/polybar" = { source = ../.config/polybar; recursive = true; };
+    # ".config/river/init".source = ../.config/river/init;
+    # ".config/i3/config".source = ../.config/i3/config;
+    # ".config/polybar" = { source = ../.config/polybar; recursive = true; };
   };
 
 
