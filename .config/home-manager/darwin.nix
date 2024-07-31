@@ -7,7 +7,12 @@
 
   home.stateVersion = "23.11";
 
-  home.packages = with pkgs; [ vscode ];
+  home.packages = with pkgs; [ 
+    python3
+    vscode
+    emacs ripgrep coreutils fd git clang
+    sqlite
+  ];
 
   home.file = { };
 
