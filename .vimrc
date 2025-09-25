@@ -29,7 +29,7 @@ set nocompatible
 set number relativenumber
 
 " set hidden "not sure what this does
-set nowrap "do not wrap lines
+" set nowrap "do not wrap lines
 
 map <leader>y "+y
 map <leader>yy "+yy
@@ -42,8 +42,8 @@ nnoremap <Space>l :NERDTreeClose<CR>
 
 syntax enable
 try
-   colorscheme desert
-   "colorscheme rosebones
+   "colorscheme desert
+   colorscheme rosebones
 catch
 endtry
 
@@ -132,6 +132,8 @@ if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.vimrc,*.md,*.csv :call CleanExtraSpaces()
 endif
 
+" Run current file through interpreter. TODO: maybe update this to instead
+" throw you into repl with everything loaded instead?
 map <leader><CR> :call File_cmd()<cr>
 function File_cmd()
   execute ':w'
@@ -139,8 +141,8 @@ function File_cmd()
     exec ':! python3 %'
   elseif expand('%:e') ==? 'sh'
     exec ':!./%'
-  elseif expand('%:e') ==? 'cpp'
-    exec ':! make % && ./%'
+"  elseif expand('%:e') ==? 'cpp'
+"    exec ':! make % && ./%'
   elseif expand('%:e') ==? 'ml'
     exec ':! ocaml %'
   endif

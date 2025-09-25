@@ -68,3 +68,4 @@ alias v=nvim
 alias c=cat
 
 
+alias rv='docker run -i --rm -v "$PWD":/root ghcr.io/shouxulin/cs4414hw1'

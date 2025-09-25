@@ -37,6 +37,8 @@
 (setq doom-theme nil)
 ;; (setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 13))
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 12))
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)

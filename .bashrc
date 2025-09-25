@@ -27,3 +27,8 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 # opam configuration
 test -r '/Users/tean/.opam/opam-init/init.sh' && . '/Users/tean/.opam/opam-init/init.sh' > /dev/null 2> /dev/null || true
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/tean/.lmstudio/bin"
+
+. "$HOME/.local/bin/env"
