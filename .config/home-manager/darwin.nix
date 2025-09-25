@@ -7,14 +7,27 @@
 
   home.stateVersion = "23.11";
 
-  home.packages = with pkgs; [ 
-    python3
+  home.packages = with pkgs; [
+    # python312
+    # python312Packages.conda
+    # python312Packages.matplotlib
+    # python312Packages.numpy
+    nodejs_22
     vscode
     emacs ripgrep coreutils fd git clang
-    sqlite
+    neovim
+    ueberzug
+    imagemagick # (for .svg previews)
+    ffmpeg # (for video file thumbnails)
+    # gs # (for pdf previews)
+    dvtm abduco
+    yazi
+    go gopls
+    spotifyd
+    # ocaml opam
+    zathura
   ];
-
-  home.file = { };
+home.file = { };
 
   programs = {
     gpg = {

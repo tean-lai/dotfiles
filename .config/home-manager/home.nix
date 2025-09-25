@@ -25,9 +25,8 @@
     })
     taplo pylint python312Packages.python-lsp-server marksman nil #lsp
     kakoune vis
-
     calcurse
-
+    lf
   ];
 
   programs = {
@@ -35,16 +34,6 @@
 
     alacritty = {
       enable = true;
-      settings = {
-        cursor.style = "Block";
-        window = {
-          opacity = 0.9;
-          padding = {
-            x = 10;
-            y = 10;
-          };
-        };
-      };
     };
 
     git = {
@@ -59,27 +48,15 @@
     };
 
     helix = {
-      defaultEditor = true;
       enable = true;
     };
 
-    lf.enable = true;
 
 
   };
 
-  home.file = {
-    # ".config/kitty" = { source = ../.config/kitty; recursive = true; };
-    # ".config/helix" = {
-    #   source = ../.config/helix;
-    #   recursive = true;
-    # };
-    # ".zshrc".source = ../../.zshrc;
-  };
 
-  home.sessionVariables = { EDITOR = "hx"; };
 
   programs.home-manager.enable = true;
-
 
 }
